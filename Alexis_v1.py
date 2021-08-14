@@ -21,19 +21,23 @@ def record_audio(ask = False):
 
 def respond(voice_data):
     if 'what is your name' in voice_data:
-        print('My name is Shawn')
+        print('My name is Alexis')
+
     if 'What time is it' in voice_data:
         print(ctime())
+
     if 'search' in voice_data:
         search = record_audio('What do you want to search?')
         url = 'https://google.com/search?q=' + search
         webbrowser.get().open(url)
         print('Here is what I found for ' + search)
+
     if 'find location' in voice_data:
         location = record_audio('What is the location?')
         url = 'https://google.nl/maps/place/' + location + '/&amp;'
         webbrowser.get().open(url)
         print('Here is the location of ' + location)
+
     if 'exit' in voice_data:
         exit()
     
