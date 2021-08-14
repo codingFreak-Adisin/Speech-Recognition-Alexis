@@ -26,7 +26,7 @@ def respond(voice_data):
         print(ctime())
     if 'search' in voice_data:
         search = record_audio('What do you want to search?')
-        url = 'hpythttps://google.com/search?q=' + search
+        url = 'https://google.com/search?q=' + search
         webbrowser.get().open(url)
         print('Here is what I found for ' + search)
     if 'find location' in voice_data:
